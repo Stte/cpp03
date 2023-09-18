@@ -25,7 +25,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 		return ;
 	hp -= amount;
 	std::cout << "ClapTrap " << name << " took " << amount
-			<< " of damage. " << name << " has " << hp << " HP left." << std::endl;
+			<< " damage. " << name << " has " << hp << " HP left." << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
