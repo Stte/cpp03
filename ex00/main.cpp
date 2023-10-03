@@ -7,5 +7,11 @@ int main(void)
 	rasmus.attack("Tuomo");
 	rasmus.takeDamage(5);
 	rasmus.beRepaired(3);
+
+	ClapTrap test(rasmus);
+	test.takeDamage(5);
+	rasmus.beRepaired(3);
+	test.takeDamage(5);
+	test.attack("Tuomo");
 	return (0);
 }

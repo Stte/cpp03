@@ -10,6 +10,22 @@ ClapTrap::~ClapTrap()
 	std::cout << "Destructor called" << std::endl;
 };
 
+ClapTrap::ClapTrap(const ClapTrap &claptrap)
+{
+	std::cout << "Copy constructor called"<< std::endl;
+	*this = claptrap;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap)
+{
+	std::cout << "Copy assignment operator called" << std::endl;
+	name = claptrap.name;
+	hp = claptrap.hp;
+	energy = claptrap.energy;
+	atk_dmg = claptrap.atk_dmg;
+	return (*this);
+}
+
 void ClapTrap::attack(const std::string& target)
 {
 	if (hp <= 0 || energy <= 0)
